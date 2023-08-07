@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    color: #1b1b1b;
+}
+
+a {
+    color: #1b1b1b;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4b4b4b;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+ul li {
+    font-size: 0.83rem;
+}
+
+nav ul li {
+    font-size: 1rem;
+}
+
+blockquote {
+    margin-bottom: 0;
+}
+
+figure {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.figure-img {
+    width: 100%;
+    height: 23rem;
+    object-fit: cover;
+}
+
+figcaption {
+    font-size: 0.83rem;
+    color: #4b4b4b;
+}
+
+/* header {
+    box-shadow: 0rem 0.1rem 1rem #1b1b1b;
+} */
+
+footer {
+    background-color: #f1f1f1;
+    /* color: whitesmoke; */
+    padding: 5rem 10% 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+/* footer ul a {
+      color: whitesmoke;
+    }
+
+    footer ul a:hover {
+      color: #cecece;
+} */
+
+.div-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.block-font {
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    letter-spacing: 0.5rem;
+}
+
+#nav-icon {
+    z-index: 4;
+}
+
+.navbar-mobile {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.nav-expanded-icon {
+    position: fixed !important;
+    align-self: end;
+    margin: 2rem 8%;
+}
+
+@media screen and (min-width: 500px) {
+    #kkn-ppm {
+        font-size: 1rem !important;
+    }
+
+    #copyright {
+        font-size: 0.83rem !important;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .nav-list {
+        display: flex !important;
+        align-items: center;
+    }
+
+    .nav-icon {
+        display: none;
+    }
+}

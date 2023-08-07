@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawulo Wunung - Pesona Wisata Desa di Ujung Selatan Wonosari</title>
+
+    <link rel="icon" href="img/gunungkidul.png">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap 5.2.x -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        hr {
+            opacity: 1;
+            color: #ffbb00;
+        }
+
+        .separator hr {
+            width: 30%;
+            border-width: 0.3rem;
+        }
+
+        header,
+        header a {
+            color: white;
+        }
+
+        header a:hover {
+            color: #cccccc;
+        }
+
+        .nav-expanded {
+            background-color: #242424;
+            display: flex !important;
+            flex-direction: column;
+            position: fixed;
+            z-index: 4;
+            font-size: 1rem;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            gap: 2.1rem !important;
+            padding: 30% 30% 0 15%;
+            transition: 0.2s;
+        }
+
+        .nav-expanded a li {
+            font-size: 1.1rem !important;
+            color: whitesmoke
+        }
+
+        #image-container {
+            height: 38rem;
+        }
+
+        #image {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        #header-1 {
+            margin: 35% 0 10%;
+            padding: 3rem 0 3rem 20%;
+            color: white;
+        }
+
+        #header-1 p {
+            font-size: 1rem;
+        }
+
+        #broad-view-container {
+            background-color: grey;
+            height: 23rem;
+        }
+
+        .carousel-inner {
+            display: flex;
+            align-items: center;
+            height: 23rem;
+        }
+
+        .carousel-item {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        #location-box,
+        #geographic-box {
+            background-color: white;
+            margin: 10%;
+        }
+
+        .header-4-p {
+            font-size: 0.83rem;
+        }
+
+        .galery-title h2 {
+            font-size: 2rem;
+        }
+
+        .box-image {
+            width: 100%;
+            height: 15rem;
+            background-color: grey;
+        }
+
+        .galery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media screen and (min-width: 500px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            header a img {
+                width: 2.6rem !important;
+            }
+
+            .nav-icon {
+                font-size: 1.5rem;
+            }
+
+            .nav-expanded {
+                padding: 20% 35% 0 10%;
+            }
+
+            #image-container {
+                height: 37rem;
+            }
+
+            #header-1 {
+                padding: 3rem 13%;
+                margin: 20% 0 10%;
+            }
+
+            #header-1 p {
+                font-size: 1.1rem;
+                line-height: 1.4rem;
+                letter-spacing: 0.1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                width: fit-content;
+            }
+
+            .galery-title p {
+                font-size: 1.2rem;
+            }
+
+            .galery-title h2 {
+                font-size: 2.6rem;
+            }
+
+            .box-image {
+                height: 20rem;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            h1 {
+                font-size: 4.7rem;
+            }
+
+            header {
+                position: absolute;
+                z-index: 2;
+                color: white;
+            }
+
+            header a img {
+                width: 3rem !important;
+            }
+
+            h2 {
+                font-size: 2.4rem;
+            }
+
+            h3 {
+                font-size: 1.9rem;
+            }
+
+            hr {
+                opacity: 0.5;
+            }
+
+            .separator hr {
+                width: 26rem;
+                border-width: 0.2rem;
+            }
+
+            #image-container {
+                height: 40rem !important;
+            }
+
+            #short-desc,
+            #administrasi {
+                align-items: center;
+                padding: 5rem 8rem !important;
+            }
+
+            .header-2,
+            .header-3 {
+                width: 50rem !important;
+            }
+
+            section>.header-2-p,
+            section>.header-3-p {
+                width: 50rem;
+            }
+
+            .header-2-p {
+                font-size: 1.2rem;
+            }
+
+            .header-3-p {
+                font-size: 1.2rem;
+            }
+
+            .nav-list {
+                display: flex !important;
+            }
+
+            #nav-icon {
+                display: none;
+            }
+
+            #broad-view-container {
+                height: 35rem;
+            }
+
+            .carousel-inner {
+                height: 35rem;
+            }
+
+            .carousel-item {
+                width: 100%;
+                height: 100%;
+            }
+
+            #map-container {
+                width: 50%;
+            }
+
+            #location,
+            #geographic {
+                margin-top: 5rem;
+            }
+
+            #location-box,
+            #geographic-box {
+                width: 50%;
+                margin: 0 3%;
+                position: static !important;
+            }
+
+            .header-4-p {
+                font-size: 1.1rem;
+                line-height: 1.9rem;
+            }
+
+            #photo-grid-container {
+                gap: 2rem;
+            }
+
+            .box-image {
+                width: 24%;
+                height: 12rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="w-100 d-flex justify-content-between align-items-center py-3"
+        style="padding-left: 8%; padding-right: 8%">
+        <a href="#">
+            <img src="img/gunungkidul.png" alt="Gunungkidul" style="width: 2.2rem">
+        </a>
+        <nav>
+            <ul class="nav-list d-none gap-4">
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="destinations.html">
+                    <li>Destinasi Wisata</li>
+                </a>
+                <a href="culture.html">
+                    <li>Kebudayaan</li>
+                </a>
+                <!-- <a href="about-creator.html">
+                    <li>About Creator</li>
+                </a> -->
+            </ul>
+            <i id="nav-icon" class="fas fa-bars" style="font-size: 1.2rem; cursor: pointer;"></i>
+        </nav>
+    </header>
+
+    <main>
+        <section id="first-row" class="d-flex flex-wrap align-items-center gap-5">
+            <div id="image-container" class="d-flex w-100 justify-content-center position-absolute top-0"
+                style="z-index: -1; background-color: black">
+                <img src="img/pembangunan.jpeg" alt="Pengecoran Jalan" id="image" draggable="false">
+            </div>
+            <div id="header-1" class="d-flex flex-column gap-4">
+                <h1 style="margin-bottom: 1.6rem">Kawulo Wunung</h1>
+                <div class="div-column gap-3">
+                    <p style="color: #d3d3d3">Pesona Pariwisata Desa di Ujung<br>Selatan Wonosari</p>
+                    <hr style="width: 30%; border-width: 0.3rem; opacity: 1; color: #ffbb00;">
+                </div>
+            </div>
+        </section>
+
+
+        <section id="short-desc" class="d-flex flex-column gap-5 p-5 pt-0">
+            <div class="d-flex justify-content-center">
+                <hr style="width: 6rem; border-width: 0.3rem; opacity: 1; color: #ffbb00;">
+            </div>
+            <div class="header-2" class="w-100">
+                <h2>Desa Wunung</h2>
+            </div>
+            <p class="header-2-p">
+                Desa Wunung merupakan sebuah desa yang berada di wilayah paling selatan di kapanewon Wonosari. Terdapat
+                dua
+                versi mengenai asal dari kata
+                'Wunung'. Yang pertama, Wunung merupakan gabungan dari kata 'wuh' yang berarti dedaunan kering,
+                dan 'gunung'. Ada juga yang mengatakan bahwa Wunung merupakan gabungan dari kata 'awu' yang berarti
+                abu
+                dan 'gunung'.
+                <br><br>
+                Kedua versi ini merujuk kepada legenda masyarakat bahwa para pendiri desa ini membuka lahan dengan
+                membabat hutan. Kegiatan pembabatan hutan itu membuat batang-batang kayu dan daun-daun kering berserakan
+                dimana-mana. Setelah batang dan daun itu dipinggirkan, sisa-sisa pembabatan hutan itu kemudian dibakar.
+                Abu dari pembakaran itu diceritakan sangat banyak hingga menggunung. Dari situlah kata 'wuh', 'awu', dan
+                'gunung' berasal.
+            </p>
+        </section>
+
+        <div class="d-flex justify-content-center mb-5">
+            <hr style="width: 6rem; border-width: 0.3rem; opacity: 1; color: #ffbb00;">
+        </div>
+
+        <div class="w-100 overflow-hidden" style="height: 25rem">
+            <img src="img/kali-semurup.jpeg" alt="Kali Semurup" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+            <hr style="width: 6rem; border-width: 0.3rem; opacity: 1; color: #ffbb00;">
+        </div>
+
+        <section id="short-desc" class="d-flex flex-column gap-5 p-5 pt-0">
+            <p class="header-2-p">
+                Meskipun demikian, desa Wunung diberkati dengan keindahan alam yang menakjubkan. Desa ini dibelah oleh
+                sungai yang mengalir dari utara hingga selatan. Dan di sini jugalah sungai itu berakhir. Pinggiran
+                sungai yang dihiasi batu-batu kapur berwarna putih serasi dengan hijaunya air dan rumput kalanjana di
+                bantaran sungainya.
+            </p>
+        </section>
+
+        <div class="separator w-100 mb-5 d-flex justify-content-center">
+            <hr />
+        </div>
+
+        <!-- <section id="broad-view">
+            <div id="broad-view-container" class="d-flex w-100">
+                <img src="img/kedung-gsk-1.jpeg" alt="Random stone" style="width: 100%; object-fit: cover;">
+            </div>
+        </section> -->
+
+        <section>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"
+                data-bs-config='{"interval": 2000}'>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/karawitan-rasulan-5.jpeg" class="d-block w-100" alt="Rasulan Wunung"
+                            draggable="false">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/pengrawit 2.jpeg" class="d-block w-100" alt="Rasulan Wunung" draggable="false">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/pengrawit sinden.jpeg" class="d-block w-100" alt="Rasulan Wunung"
+                            draggable="false">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="separator w-100 d-flex justify-content-center" style="margin-top: 5rem">
+            <hr />
+        </div>
+
+        <section id="administrasi" class="d-flex flex-column gap-5 p-5">
+            <div class="header-3">
+                <h3>Administrasi</h3>
+            </div>
+            <p class="header-3-p">
+                Desa Wunung dibagi ke dalam 5 pedukuhan, yaitu padukuhan Wunung, Teguhan, Kamal, Soka I, dan Soka II.
+                <br>
+                Kelurahan Wunung berada di bawah wilayah administasi kecamatan Wonosari.
+            </p>
+        </section>
+
+        <div class="separator w-100 my-5 d-flex justify-content-center">
+            <hr />
+        </div>
+
+        <section id="location" class="d-flex align-items-center w-100">
+            <div id="map-container" class="d-flex w-100">
+                <div class="w-100" style="background-color: grey; height: 41rem">
+                    <iframe width="100%" height="100%"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAg9g3jPXpLJdGrTrvxWIlCdjPSAyc7ZPk&q=Wunung"
+                        frameborder="0" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div id="location-box" class="d-flex flex-column justify-content-center gap-5 p-5 position-absolute">
+                <p class="header-4-p">
+                    Wilayah Desa Wunung terbentang dari koordinat 7°59'41.6004'' LS, 110°35'0.5352'' BT hingga
+                    koordinat 8°3'28.2492'' LS, 110°33'24.9048'' BT.
+                    <br>
+                    <br>
+                    Di utara, Wunung berbatasan dengan wilayah desa Wareng, di timur berbatasan dengan wilayah desa
+                    Mulo, di sebelah Selatan berbatasan dengan wilayah desa Kemiri, dan di barat berbatasan dengan
+                    wilayah desa Sodo dan Giring.
+                </p>
+            </div>
+        </section>
+
+        <div class="separator w-100 mt-5 d-flex justify-content-center">
+            <hr />
+        </div>
+
+        <section id="geographic" class="d-flex align-items-center w-100">
+            <div id="geographic-box" class="d-flex flex-column justify-content-center gap-5 p-5 position-absolute">
+                <h2>Geografis</h2>
+                <p class="header-4-p">
+                    Tanah di desa Wunung di dominasi tanah berkapur, meskipun terdapat wilayah di barat desa yang
+                    memungkinkan untuk adanya areal persawahan.
+                    <br>
+                    <br>
+                    Wunung merupakan perbatasan antara daerah tanah berkapur dengan wilayah bebatuan karst. Perbatasan
+                    ini berada di perbatasan dukuh Wunung dan Kamal.
+                </p>
+            </div>
+            <div id="map-container" class="d-flex w-100">
+                <div class="w-100" style="background-color: grey; height: 41rem">
+                    <img src="img/stone.jpeg" alt="Batu Karst" width="100%" height="100%" style="object-fit: cover;"
+                        draggable="false">
+                </div>
+            </div>
+        </section>
+
+        <div class="separator w-100 my-5 d-flex justify-content-center">
+            <hr />
+        </div>
+
+        <section id="photo-grid-container" class="d-flex flex-column justify-content-center mb-5">
+            <div class="galery-title header-2 div-column gap-4" style="padding: 3rem 10% 3rem">
+                <p class="block-font">GALERI</p>
+                <h2>Keindahan Alam Wunung</h2>
+            </div>
+            <div id="photo-grid" class="d-flex flex-wrap gap-1 justify-content-center">
+                <div class="box-image">
+                    <img src="img/kali-semurup.jpeg" alt="Kali Semurup" class="galery-img">
+                </div>
+                <div class="box-image">
+                    <img src="img/kedung-gsk-1.jpeg" alt="Kedung Giri Sela Kandha" class="galery-img">
+                </div>
+                <div class="box-image">
+                    <img src="img/savana.jpeg" alt="Padang Rumput" class="galery-img">
+                </div>
+                <div class="box-image">
+                    <img src="img/kelapa.jpeg" alt="Pohon Kelapa" class="galery-img">
+                </div>
+                <div class="box-image">
+                    <img src="img/beringin-gsk.jpeg" alt="Beringin Giri Sela Kandha" class="galery-img">
+                </div>
+                <div class="box-image">
+                    <img src="img/tebing-sungai-semurup.jpeg" alt="Tebing Sungai Semurup" class="galery-img">
+                </div>
+                <div class="box-image">
+                    <img src="img/air di bendungan.jpg" alt="Kali Soka" class="galery-img">
+                </div>
+                <div class="box-image">
+                    <img src="img/batu di sungai.jpeg" alt="Batu di Sungai" class="galery-img">
+                </div>
+                <div class="box-image">
+                    <img src="img/jembatan bambu.jpeg" alt="Jembatan Bambu" class="galery-img">
+                </div>
+                <div class="box-image">
+                    <img src="img/ceruk.jpeg" alt="Ceruk Gua" class="galery-img">
+                </div>
+                <div class="box-image">
+                    <img src="img/lubang-semurup-1.jpeg" alt="Lubang Air Semurup" class="galery-img">
+                </div>
+                <div class="box-image">
+                    <img src="img/pohon.jpeg" alt="Pohon di Kali Gowang" class="galery-img">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="credit" class="d-flex flex-wrap justify-content-between gap-5">
+
+            <div class="d-flex flex-wrap" style="gap: 6rem">
+                <div id="footer-nav" class="d-flex flex-column gap-4">
+                    <h5>Navigation</h5>
+                    <ul class="d-flex flex-column gap-2 ps-0">
+                        <a href="#">
+                            <li>Home</li>
+                        </a>
+                        <a href="destinations.html">
+                            <li>Destinasi Wisata</li>
+                        </a>
+                        <a href="culture.html">
+                            <li>Kebudayaan</li>
+                        </a>
+                        <!-- <a href="about-creator.html">
+                            <li>About Creator</li>
+                        </a> -->
+                    </ul>
+                </div>
+
+                <div id="thanks" class="d-flex flex-column gap-4">
+                    <h5>Special Thanks to</h5>
+                    <ul class="d-flex flex-column gap-2 ps-0">
+                        <li>Pak Darto, Kepala Desa Wunung</li>
+                        <li>Pak Hono, Pengrajin Tembaga</li>
+                        <li>Seluruh Masyarakat Desa Wunung</li>
+                        <li>Universitas Gadjah Mada</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="kkn-credit" class="d-flex align-items-center gap-4">
+            <img src="img/kkn-ppm_logo.png" alt="KKN-PPM Logo" style="width: 5rem">
+            <div id="kkn-credit-desc">
+                <h5>KKN-PPM UGM</h5>
+                <p id="kkn-ppm" style="font-size: 0.83rem; margin-bottom: 0.5rem">
+                    Kuliah Kerja Nyata - Pengabdian
+                    Masyarakat
+                </p>
+                <p id="copyright" style="font-size: 0.7rem">Copyright @2023 Kawulo Wunung</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/navbar-mobile.js"></script>
+</body>
+
+</html>

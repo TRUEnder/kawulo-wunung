@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giri Sela Kandha - Kawulo Wunung</title>
+
+    <link rel="icon" href="img/gunungkidul.png">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        hr {
+            opacity: 1;
+            color: #ffbb00;
+        }
+
+        .separator hr {
+            width: 30%;
+            border-width: 0.3rem;
+        }
+
+        header,
+        header a {
+            color: white;
+        }
+
+        header a:hover {
+            color: #cccccc;
+        }
+
+        .nav-expanded {
+            background-color: #242424;
+            display: flex !important;
+            flex-direction: column;
+            position: fixed;
+            z-index: 4;
+            font-size: 1rem;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            gap: 2.1rem !important;
+            padding: 30% 30% 0 15%;
+            transition: 0.2s;
+        }
+
+        .nav-expanded a li {
+            font-size: 1.1rem !important;
+            color: whitesmoke
+        }
+
+        #image-container {
+            height: 33.6rem;
+        }
+
+        #image {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+            opacity: 0.5;
+        }
+
+        #header-1 {
+            margin: 35% 0 10%;
+            padding: 3rem 0 3rem 15%;
+            color: white;
+        }
+
+        #header-1 p {
+            font-size: 1rem;
+        }
+
+        #thumbnail-container {
+            width: 100%;
+            background-color: #292929;
+        }
+
+        .thumbnail {
+            opacity: 0.7;
+        }
+
+        #destination-title {
+            position: absolute;
+            top: 25rem;
+            color: whitesmoke;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+        }
+
+        h4 {
+            font-size: 1.8rem;
+        }
+
+        .discover-text {
+            display: flex;
+            gap: 2rem;
+            padding: 2.5rem 4rem;
+            background-color: #292929;
+            color: whitesmoke;
+            font-size: 1.1rem;
+        }
+
+        .pocket {
+            background-color: #dadada;
+        }
+
+        .pocket-text {
+            width: 60%;
+        }
+
+        #vertical-post {
+            box-shadow: 0rem 0rem 2rem #8a8a8a;
+        }
+
+        .vertical-p {
+            font-size: 0.83rem;
+        }
+
+        .fill-text p {
+            width: 80%;
+            padding: 8%;
+            padding-left: 20%;
+            font-size: 0.83rem;
+            line-height: 1.5rem;
+        }
+
+        figcaption {
+            width: 70%;
+        }
+
+        @media screen and (min-width: 500px) {
+            header a img {
+                width: 2.6rem !important;
+            }
+
+            .nav-icon {
+                font-size: 1.5rem;
+            }
+
+            .nav-expanded {
+                padding: 20% 35% 0 10%;
+            }
+
+            #image-container {
+                height: 39.5rem;
+            }
+
+            .vertical-p {
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            h1 {
+                font-size: 3.5rem !important;
+            }
+
+            header a img {
+                width: 3rem !important;
+            }
+
+            .nav-list {
+                display: flex !important;
+            }
+
+            #nav-icon {
+                display: none;
+            }
+
+            #image-container {
+                height: 39rem;
+            }
+
+            #header-1 {
+                margin: 16% 0 10%;
+            }
+
+            #header-1 p {
+                font-size: 1.1rem;
+            }
+
+            .fill-text {
+                display: flex;
+                justify-content: center;
+            }
+
+            .fill-text p {
+                font-size: 1.1rem;
+                line-height: 2rem;
+                padding-left: 8%;
+            }
+
+            #vertical-post {
+                height: 40rem;
+                flex-wrap: nowrap !important;
+            }
+
+            .vertical-title {
+                width: 30% !important;
+            }
+
+            .vertical-p {
+                width: 23% !important;
+            }
+
+            .vertical-img {
+                width: 40% !important;
+            }
+
+            .separator hr {
+                width: 20% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="w-100 d-flex justify-content-between align-items-center py-3"
+        style="padding-left: 8%; padding-right: 8%">
+        <a href="./">
+            <img src="img/gunungkidul.png" alt="Gunungkidul" style="width: 2.2rem">
+        </a>
+        <nav>
+            <ul class="nav-list d-none gap-4">
+                <a href="./">
+                    <li>Home</li>
+                </a>
+                <a href="destinations.html">
+                    <li>Destinasi Wisata</li>
+                </a>
+                <a href="culture.html">
+                    <li>Kebudayaan</li>
+                </a>
+                <!-- <a href="about-creator.html">
+                        <li>About Creator</li>
+                    </a> -->
+            </ul>
+            <i id="nav-icon" class="fas fa-bars" style="font-size: 1.2rem; cursor: pointer;"></i>
+        </nav>
+    </header>
+
+    <main>
+        <section id="first-row" class="d-flex flex-wrap align-items-center gap-5">
+            <div id="image-container" class="d-flex w-100 justify-content-center position-absolute top-0"
+                style="z-index: -1; background-color: black">
+                <img src="img/gsk-3.jpeg" alt="Kedung Giri Sela Kandha" id="image" draggable="false">
+            </div>
+            <div id="header-1" class="d-flex flex-column">
+                <h1 style="margin-bottom: 1.6rem">Giri Sela Kandha</h1>
+                <div class="div-column gap-3">
+                    <p style="color: #d3d3d3">Wisata berbasis Konservasi Alam</p>
+                    <hr style="width: 30%; border-width: 0.3rem; opacity: 1; color: #ffbb00;">
+                </div>
+            </div>
+        </section>
+
+        <!-- <div id="thumbnail-container" class="div-column align-items-center">
+            <img src="img/lembah gsk.jpeg" alt="Kedung Giri Sela Kandha" class="thumbnail w-100">
+            <div id="destination-title" class="div-column align-items-center gap-4">
+                <h1>Giri Sela Kandha</h1>
+                <p class="block-font" style="font-size: 1.2rem">Wisata berbasis Konservasi Alam</p>
+            </div>
+        </div> -->
+
+        <div class="separator w-100 mt-5 d-flex justify-content-center">
+            <hr />
+        </div>
+
+        <div class="fill-text w-100">
+            <p>
+                Wisata berbasis konservasi alam. Dengan luasan kurang lebih 30 Ha, di
+                dalamnya terdapat sekitar 90 jenis tanaman, serta konservasi kera ekor panjang
+                yang habitatnya di sekitar lokasi.
+                <br><br>
+            </p>
+        </div>
+
+        <div class="separator w-100 d-flex justify-content-center" style="margin-bottom: 5rem">
+            <hr />
+        </div>
+
+        <div id="vertical-post" class="d-flex flex-wrap justify-content-between mb-4 gap-5 pt-5">
+            <div class="vertical-title w-100 div-column justify-content-center gap-2" style="padding-left: 7%">
+                <p class="block-font">DISCOVER</p>
+                <h3>Pohon Beringin</h3>
+                <h4>Giri Sela Kandha</h4>
+            </div>
+            <div class="vertical-p w-100 d-flex justify-content-center align-items-center">
+                <p style="width: 70%">
+                    Giri Sela Kandha terkenal dengan pohon beringinnya yang ikonik. Pohon
+                    beringin ini
+                    terletak di
+                    pinggir kedung di bawah resort Giri Wanara.
+                    <br><br>
+                    Jika kita beruntung, kita dapat melihat secara langsung kera ekor panjang di sini.
+                </p>
+            </div>
+            <div class="vertical-img w-100 overflow-hidden">
+                <img src="img/beringin-gsk.jpeg" alt="Beringin Giri Sela Kandha"
+                    style="width: 100%; height: 100%; object-fit: cover;" draggable="false">
+            </div>
+        </div>
+
+        <div class="separator w-100 mb-5 d-flex justify-content-center" style="margin-top: 5rem">
+            <hr />
+        </div>
+
+        <figure class="d-flex gap-3">
+            <img src="img/kedung-gsk-1.jpeg" alt="Kedung Giri Sela Kandha" class="figure-img" draggable="false">
+            <figcaption>
+                Kedung di bawah Resort Giri Sela Kandha. Sungai yang mengalir di lembah bukit
+                kapur.
+            </figcaption>
+        </figure>
+
+        <div class="separator w-100 mb-5 d-flex justify-content-center">
+            <hr />
+        </div>
+    </main>
+
+    <footer>
+        <div id="credit" class="d-flex flex-wrap justify-content-between gap-5">
+
+            <div class="d-flex flex-wrap" style="gap: 6rem">
+                <div id="footer-nav" class="d-flex flex-column gap-4">
+                    <h5>Navigation</h5>
+                    <ul class="d-flex flex-column gap-2 ps-0">
+                        <a href="./">
+                            <li>Home</li>
+                        </a>
+                        <a href="destinations.html">
+                            <li>Destinasi Wisata</li>
+                        </a>
+                        <a href="culture.html">
+                            <li>Kebudayaan</li>
+                        </a>
+                        <!-- <a href="about-creator.html">
+                                <li>About Creator</li>
+                            </a> -->
+                    </ul>
+                </div>
+
+                <div id="thanks" class="d-flex flex-column gap-4">
+                    <h5>Special Thanks to</h5>
+                    <ul class="d-flex flex-column gap-2 ps-0">
+                        <li>Pak Darto, Kepala Desa Wunung</li>
+                        <li>Pak Hono, Pengrajin Tembaga</li>
+                        <li>Seluruh Masyarakat Desa Wunung</li>
+                        <li>Universitas Gadjah Mada</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="kkn-credit" class="d-flex align-items-center gap-4">
+            <img src="img/kkn-ppm_logo.png" alt="KKN-PPM Logo" style="width: 5rem" draggable="false">
+            <div id="kkn-credit-desc">
+                <h5>KKN-PPM UGM</h5>
+                <p id="kkn-ppm" style="font-size: 0.83rem; margin-bottom: 0.5rem">
+                    Kuliah Kerja Nyata - Pengabdian
+                    Masyarakat
+                </p>
+                <p id="copyright" style="font-size: 0.7rem">Copyright @2023 Kawulo Wunung</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/navbar-mobile.js"></script>
+</body>
+
+</html>
